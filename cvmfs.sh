@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function install_sh {
+    #https://cernvm.cern.ch/fs/
     sudo apt-get install -y lsb-release 
     wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
     sudo dpkg -i cvmfs-release-latest_all.deb
@@ -29,7 +30,6 @@ function printHelp {
     echo " -u : unmount"
     echo " -t : test"
 }
-
 
 if [ $# -eq 0 ]; then
     printHelp
